@@ -1,0 +1,39 @@
+.text-block {
+	margin-top: 0;
+	line-height: 1.8;
+
+	&_color {
+		&_white {
+			color: var(--white);
+		}
+	}
+
+	&_align {
+		&_center {
+			text-align: center;
+		}
+	}
+
+	&_size {
+		&_big {
+			font-size: 20px;
+			line-height: 1.4;
+		}
+
+		&_extra-big {
+			font-size: 28px;
+			font-weight: bold;
+			line-height: 1.18;
+		}
+	}
+}
+
+@media (max-width: 540px) {
+	.text-block {
+		&_size {
+			&_extra-big {
+				font-size: 18px;
+			}
+		}
+	}
+}

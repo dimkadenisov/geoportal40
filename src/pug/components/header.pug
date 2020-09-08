@@ -1,0 +1,26 @@
+mixin header(props = {})
+  include logo
+  include main-menu
+  include button
+
+  .header&attributes(attributes)
+    .container
+      .header__inner
+        +logo
+        +main-menu({
+          items: [
+            {
+              text: 'О проекте',
+              href: '#about-project'
+            },
+            {
+              text: 'О регионе',
+              href: '#about-region'
+            },
+            {
+              text: 'Программа развития',
+              href: '/development-programs.html'
+            },
+          ]
+        })
+        +button({tag: 'a', text: 'Войти'})(class="button_shadow")
