@@ -1,6 +1,6 @@
 mixin heading(props = {})
 
-  - const { level, tag, text } = props;
+  - const { level = 1, tag, text } = props;
   - const serealizedTag = tag ? tag : `h${level}`;
 
   #{serealizedTag}(class=`heading heading_level_${level}`)&attributes(attributes)

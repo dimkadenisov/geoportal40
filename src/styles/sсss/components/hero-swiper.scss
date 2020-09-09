@@ -1,0 +1,21 @@
+.hero-swiper {
+	&__inner {
+		height: 505px;
+	}
+
+	div.swiper-pagination {
+		bottom: 44px;
+	}
+
+	span.swiper-pagination-bullet {
+		width: 10px;
+		height: 10px;
+		margin: 0 5px;
+		background: var(--white);
+		opacity: 0.5;
+	}
+
+	span.swiper-pagination-bullet-active {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,19 @@
+mixin hero-swiper(props = {})
+  include hero-swiper-slide
+  include heading
+  include cite
+
+  section.hero-swiper&attributes(attributes)
+    article.hero-swiper__inner.swiper-container
+      ul.swiper-wrapper
+        li.swiper-slide
+          +hero-swiper-slide(style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/img/hero-image-1.jpg)")
+            +heading({tag: 'span', text: 'Мониторинг земель <br/> сельскохозяйственного <br/> назначения'})(class="heading_color_white")
+            +button({tag: 'a', text: 'Перейти на карту'})(href="#" class="button_color_primary")
+        li.swiper-slide
+          +hero-swiper-slide(style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/img/hero-image-2.jpg)")
+            +heading({tag: 'bloquote', text: 'Земля — это колыбель разума, но нельзя <br/> вечно жить в колыбели.'})(class="heading_color_white")
+            +cite({text: 'Константин Эдуардович Циолковский'})(class="cite_color_white")
+      .swiper-pagination
+      .swiper-button-prev
+      .swiper-button-next

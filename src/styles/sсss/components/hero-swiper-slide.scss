@@ -1,0 +1,16 @@
+.hero-swiper-slide {
+	display: flex;
+	height: 100%;
+	padding-bottom: 100px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		height: 100%;
+	}
+}

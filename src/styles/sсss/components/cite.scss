@@ -1,0 +1,11 @@
+.cite {
+	font-size: 18px;
+	font-weight: 900;
+	font-style: normal;
+
+	&_color {
+		&_white {
+			color: var(--white);
+		}
+	}
+}
