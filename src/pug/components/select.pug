@@ -1,0 +1,11 @@
+mixin select(props = {})
+
+  - const { options } = props;
+
+  .select
+    select.select__select&attributes(attributes)
+      each option in options
+        option(value=option)= option
+      option(value="Option length") Очень длинный option, который не влезает
+    span.select__arrow
+    span.select__focus

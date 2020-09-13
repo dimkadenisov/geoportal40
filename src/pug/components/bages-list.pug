@@ -1,0 +1,9 @@
+mixin bages-list(props = {})
+  include bage
+
+  - const { items } = props;
+
+  ul.bages-list&attributes(attributes)
+    each item in items
+      li.bages-list__item
+        +bage({text: item})

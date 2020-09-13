@@ -1,0 +1,19 @@
+.extended-search-block {
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__input.input {
+		width: 402px;
+	}
+
+	&__button {
+		margin-left: auto;
+	}
+
+	&__filters {
+		flex-basis: 100%;
+		margin-top: 30px;
+	}
+}

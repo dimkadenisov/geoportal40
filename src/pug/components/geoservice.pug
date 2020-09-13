@@ -1,0 +1,10 @@
+mixin geoservice(props = {})
+
+  - const { imgUrl, name, tagline } = props;
+
+  a(href="#").geoservice&attributes(attributes)
+    .geoservice__inner
+      .geoservice__img-wrapper
+        img(src=imgUrl, alt="Описание геосервиса").geoservice__img
+      span.geoservice__name= name
+      span.geoservice__tagline= tagline

@@ -1,0 +1,8 @@
+mixin disclaimer(props = {})
+
+  - const { text } = props;
+
+  .disclaimer&attributes(attributes)
+    svg.disclaimer__icon
+      use(href="#attention")
+    span.disclaimer__text= text

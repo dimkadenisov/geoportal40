@@ -1,0 +1,17 @@
+.order-data-form {
+	margin-bottom: 155px;
+
+	&__inner {
+		padding-top: 34px;
+		padding-right: 32px;
+		padding-bottom: 10px;
+		padding-left: 32px;
+		background-color: var(--white);
+		border-radius: 20px;
+	}
+
+	&__heading {
+		max-width: 570px;
+		margin-bottom: 40px;
+	}
+}

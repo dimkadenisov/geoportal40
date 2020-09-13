@@ -2,9 +2,18 @@
 @import 'utilities/variables.scss';
 @import 'utilities/reset.scss';
 
+@import 'components/bage.scss';
+@import 'components/bages-list.scss';
 @import 'components/button.scss';
+@import 'components/capcha-block.scss';
 @import 'components/cite.scss';
+@import 'components/disclaimer.scss';
+@import 'components/extended-search-block.scss';
+@import 'components/file-selector.scss';
 @import 'components/footer.scss';
+@import 'components/form.scss';
+@import 'components/geoservice.scss';
+@import 'components/geoservices-list.scss';
 @import 'components/header.scss';
 @import 'components/heading.scss';
 @import 'components/hero-swiper.scss';
@@ -12,10 +21,18 @@
 @import 'components/icon-button.scss';
 @import 'components/icon-link.scss';
 @import 'components/icons-list.scss';
+@import 'components/input.scss';
 @import 'components/link.scss';
 @import 'components/list.scss';
 @import 'components/logo.scss';
 @import 'components/main-menu.scss';
+@import 'components/order-data-form.scss';
+@import 'components/search-block.scss';
+@import 'components/search-filters.scss';
+@import 'components/section-card.scss';
+@import 'components/select.scss';
+@import 'components/switch.scss';
 @import 'components/text-block.scss';
+@import 'components/user-content.scss';
 
 @import 'utilities/utilities.scss';

@@ -1,0 +1,11 @@
+.file-selector {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	column-gap: 10px;
+	row-gap: 10px;
+
+	&__filename {
+		color: var(--gray-400);
+	}
+}

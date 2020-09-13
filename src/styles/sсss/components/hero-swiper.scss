@@ -1,4 +1,6 @@
 .hero-swiper {
+	margin-bottom: 60px;
+
 	&__inner {
 		height: 505px;
 	}
@@ -17,5 +19,10 @@
 
 	span.swiper-pagination-bullet-active {
 		opacity: 1;
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		color: var(--white);
 	}
 }

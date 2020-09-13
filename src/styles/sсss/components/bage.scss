@@ -1,0 +1,24 @@
+.bage {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+	padding-right: 18px;
+	padding-left: 18px;
+	background-color: var(--gray-200);
+	border: 1px solid transparent;
+	border-radius: 10px;
+	color: var(--gray-800);
+	text-decoration: none;
+	transition: background-color 0.2s, color 0.2s;
+
+	&:hover {
+		background-color: var(--primary);
+		color: var(--white);
+	}
+
+	&:focus {
+		border-color: var(--primary);
+		outline: none;
+	}
+}

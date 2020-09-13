@@ -1,0 +1,15 @@
+mixin input(props = {})
+  include icon-button
+
+  - const { label, mask, type = 'input', labelAttrs, iconId } = props
+  - const tag = type === 'textarea' ? 'textarea' : 'input';
+
+
+  label.input&attributes(labelAttrs)
+    #{tag}.input__input(placeholder=label)&attributes(attributes)
+    span.input__label= label
+      if mask
+        span.input__mask= mask
+    span.input__focus
+    if iconId
+      +icon-button({iconId: iconId})(class="input__button icon-button_color_primary-light" type="button")

@@ -1,0 +1,31 @@
+mixin search-block(props = {})
+  include input
+  include bages-list
+
+  .search-block&attributes(attributes)
+    .container
+      +input({
+        label: 'Поиск по геосервисам',
+        iconId: 'search',
+        labelAttrs: {
+          class: 'search-block__input'
+        }
+      })(type="text")
+      +bages-list({
+        items: [
+          'управление',
+          'экология',
+          'туризм',
+          'сельское хозяйство',
+          'коммунальное хозяйство',
+          'лесной фонд',
+          'культура',
+          'культура',
+          'охота',
+          'транспорт',
+          'полезные ископаемые',
+          'налоги',
+          'медицина',
+          'мфц',
+        ]
+      })

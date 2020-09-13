@@ -1,0 +1,6 @@
+mixin file-selector(props = {})
+  include button
+
+  .file-selector&attributes(attributes)
+    +button({text: 'Выберите файл'})(class="button_color_primary" type="button")
+    span.file-selector__filename Файл не выбран

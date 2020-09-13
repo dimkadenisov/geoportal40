@@ -1,0 +1,11 @@
+.bages-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -10px;
+
+	&__item {
+		display: inline-block;
+		margin-right: 10px;
+		margin-bottom: 17px;
+	}
+}

@@ -1,0 +1,30 @@
+@mixin input-appearance-reset($pt: 0, $pr: 22px, $pl: 22px) {
+	width: 100%;
+	height: 52px;
+	margin: 0;
+	@if $pt {
+		padding-top: $pt;
+	}
+	padding-right: $pr;
+	padding-left: $pl;
+	border: none;
+	outline: none;
+	appearance: none;
+	background: transparent;
+	color: inherit;
+	font-size: inherit;
+	cursor: pointer;
+	z-index: 2;
+
+	&[disabled] {
+		cursor: not-allowed;
+	}
+
+	&::placeholder {
+		opacity: 0;
+	}
+
+	&::-moz-placeholder {
+		opacity: 0;
+	}
+}

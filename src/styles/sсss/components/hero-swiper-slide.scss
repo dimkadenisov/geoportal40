@@ -11,6 +11,11 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
+		max-width: 720px;
 		height: 100%;
+	}
+
+	.cite {
+		align-self: stretch;
 	}
 }

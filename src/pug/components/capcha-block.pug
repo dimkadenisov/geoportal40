@@ -1,0 +1,11 @@
+mixin capcha-block(props = {})
+  include input
+  include button
+
+  .capcha-block&attributes(attributes)
+    .capcha-block__capcha
+    +input({
+      label: 'Введите символы с картинки',
+      iconId: 'cross',
+    })(type="text" class="capcha-block__input")
+    +button({text: 'Отправить'})(class="button_color_primary")

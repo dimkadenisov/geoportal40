@@ -1,0 +1,16 @@
+mixin search-filters(props = {})
+  include input
+  include select
+
+  .search-filters&attributes(attributes)
+    .search-filters__item
+      +select({
+        options: [
+          'Все категории',
+          'Не все категории',
+        ]
+      })
+    .search-filters__item
+      +input({label: 'Название'})
+    .search-filters__item
+      +input({label: 'Описание'})

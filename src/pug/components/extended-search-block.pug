@@ -1,0 +1,17 @@
+mixin extended-search-block(props = {})
+  include input
+  include button
+  include search-filters
+
+  .extended-search-block&attributes(attributes)
+    .container
+      .extended-search-block__inner
+        +input({
+          label: 'Поиск по геосервисам',
+          iconId: 'search',
+          labelAttrs: {
+            class: 'extended-search-block__input',
+          }
+        })(type="text")
+        +button({tag: 'a', text: 'Заказать данные'})(class="button_color_primary extended-search-block__button" href="#")
+        +search-filters(class="extended-search-block__filters")

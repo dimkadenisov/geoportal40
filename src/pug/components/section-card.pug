@@ -1,0 +1,14 @@
+mixin section-card(props = {})
+  include heading
+  include text-block
+
+  - const { heading, imgUrl } = props;
+
+  .section-card&attributes(attributes)
+    .container
+      .section-card__inner
+        .section-card__heading
+          +heading({level: 2, text: heading})
+        .section-card__text
+          block
+        img(src=imgUrl alt="Описание изображения").section-card__image

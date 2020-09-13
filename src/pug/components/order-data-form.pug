@@ -1,0 +1,140 @@
+mixin order-data-form(props = {})
+  include button
+  include file-selector
+  include capcha-block
+
+  .order-data-form&attributes(attributes)
+    .container
+      .order-data-form__inner
+        +heading({
+          level: 2,
+          text: 'Формирование заявления о предоставлении физическим и юридическим лицам пространственных данных и материалов'
+        })(class="order-data-form__heading")
+        form.form
+          fieldset.form__filedset
+            div.form__field
+              +switch({
+                selected: 'Физическое лицо',
+                selectedMobile: 'Физ. лицо',
+                unselected: 'Юридическое лицо',
+                unselectedMobile: 'Юр. лицо',
+              })(data-id="order-data-form-switch")
+          fieldset(data-id="phis").form__filedset.form__filedset
+            legend.form__legend Физическое лицо
+            div.form__field
+              +input({label: 'ФИО'})(type="text" required)
+            div.form__field
+              +select({
+                options: [
+                  'Паспорт',
+                  'Полис',
+                  'Ж/д билет',
+                ]
+              })
+            div.form__field
+              +input({label: 'Серия и номер документа'})(type="number" required)
+            div.form__field
+              +input({label: 'Кем выдан'})(type="text" required)
+            div.form__field
+              +input({label: 'Дата выдачи', mask: 'дд.мм.гггг'})(type="text" required)
+            div.form__field
+              +input({label: 'СНИЛС', mask: '000-000-000 00'})(type="text" required)
+            div.form__field
+              +input({label: 'Почтовый адрес'})(type="text" required)
+            div.form__field
+              //- add autoComplete attributtes
+              +input({label: 'Адрес электронной почты'})(type="mail" required)
+          fieldset(data-id="ul").form__filedset.form__filedset.visually-hidden
+            legend.form__legend Юридическое лицо
+            div.form__field
+              +input({label: 'Название организации'})(type="text" required)
+            div.form__field
+              +input({label: 'ОГРН'})(type="number" required)
+            div.form__field
+              +input({label: 'ИНН'})(type="number" required)
+            div.form__field
+              +input({label: 'Дата выдачи', mask: 'дд.мм.гггг'})(type="text" required)
+            div.form__field
+              +input({label: 'Юридический адрес'})(type="text" required)
+            div.form__field
+              +input({label: 'Физический адрес'})(type="text" required)
+            div.form__field
+              +input({label: 'Телефон'})(type="tel" inputmode='tel' autocorrect='off' autocomplete='tel' required)
+            div.form__field
+              +input({label: 'Почтовый адрес'})(type="text" required)
+            div.form__field
+              //- add autoComplete attributtes
+              +input({label: 'Адрес электронной почты'})(type="text" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="off" required)
+          fieldset.form__filedset
+            legend.form__legend Сведения о представителе заявителя
+            div.form__field
+              +input({label: 'ФИО'})(type="text" required)
+            div.form__field
+              +input({label: 'Серия и номер документа'})(type="number" required)
+            div.form__field
+              +input({label: 'Кем выдан'})(type="text" required)
+            div.form__field
+              +input({label: 'Дата выдачи', mask: 'дд.мм.гггг'})(type="text" required)
+            div.form__field
+              +input({label: 'СНИЛС', mask: '000-000-000 00'})(type="text" required)
+            div.form__field
+              +input({
+                label: 'Наименование и реквизиты документа, подтверждающего полномочия представителя заявителя',
+                type: 'textarea'
+              })(required)
+            div.form__field
+              +input({label: 'Телефон'})(type="tel" inputmode='tel' autocorrect='off' autocomplete='tel' required)
+            div.form__field
+              +input({label: 'Почтовый адрес'})(type="text" required)
+            div.form__field
+              //- add autoComplete attributtes
+              +input({label: 'Адрес электронной почты'})(type="text" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="off" required)
+          fieldset.form__filedset
+            legend.form__legend Общая информация
+            div.form__field
+              +input({
+                label: 'Геодезические пространственные данные и материалы',
+                type: 'textarea'
+              })(required)
+            div.form__field
+              +input({
+                label: 'Картографические пространственные данные и материалы',
+                type: 'textarea'
+              })(required)
+            div.form__field
+              +input({
+                label: 'Материалы и данные дистанционного зондирования Земли',
+                type: 'textarea'
+              })(required)
+            div.form__field
+              +input({
+                label: 'Другие пространственные данные и материалы',
+                type: 'textarea'
+              })(required)
+            div.form__field
+              +input({
+                label: 'Срок использования данных',
+                type: 'textarea'
+              })(required)
+            div.form__field
+              +input({
+                label: 'Условия использования данных',
+                type: 'textarea'
+              })(required)
+          fieldset.form__filedset
+            legend.form__legend Архив документов
+            +file-selector
+          fieldset.form__filedset
+            legend.form__legend Введите символы с картинки
+            +capcha-block
+          fieldset.form__filedset
+            span.form__policy Нажимая на кнопку отправить, вы даете согласие на обработку персональных данных в соответствии с условиями
+              |
+              |
+              a(href="#") пользовательского соглашения
+              |
+              |
+              |и
+              |
+              |
+              a(href="#") политикой конфиденциальности
