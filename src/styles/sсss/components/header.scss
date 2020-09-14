@@ -6,30 +6,30 @@
 
 	&__inner {
 		display: grid;
-    grid-template-columns: max-content 1fr min-content;
+		grid-template-columns: max-content 1fr min-content;
 		align-items: center;
-    column-gap: 10px;
+		column-gap: 10px;
 		padding-top: 10px;
 		padding-bottom: 16px;
-  }
+	}
 
-  .main-menu {
-    justify-self: end;
-  }
+	.main-menu {
+		justify-self: end;
+	}
 }
 
-@media (max-width: 699px) {
+@media (max-width: 779px) {
 	.header {
 		&__inner {
 			grid-template-columns: 1fr min-content;
-      justify-content: space-between;
+			justify-content: space-between;
 			row-gap: 10px;
 		}
 
 		.main-menu {
 			grid-column: 1 / -1;
-      grid-row: 2 / 3;
-      justify-self: start;
+			grid-row: 2 / 3;
+			justify-self: start;
 		}
 	}
 }
