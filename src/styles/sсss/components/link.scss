@@ -3,41 +3,50 @@
 	font-size: 14px;
 	background-color: transparent;
 	border: none;
-  color: var(--gray-900);
-  font-weight: 500;
+	color: var(--gray-900);
+	font-weight: 500;
 	text-decoration: none;
+	cursor: pointer;
 
 	&:hover,
 	&:focus {
 		text-decoration: underline;
-  }
+	}
 
-  &_active {
-    color: var(--primary);
-  }
+	&_active {
+		color: var(--primary);
+	}
 
-	// &_color {
-	// 	&_primary {
-	// 		color: var(--primary);
+	&_color {
+		&_gray-400 {
+			color: var(--gray-400);
+		}
+		// 	&_primary {
+		// 		color: var(--primary);
 
-	// 		&:hover,
-	// 		&:focus {
-	// 			color: var(--hover);
-	// 		}
+		// 		&:hover,
+		// 		&:focus {
+		// 			color: var(--hover);
+		// 		}
 
-	// 		&:active {
-	// 			color: var(--active);
-	// 		}
-	// 	}
-	// }
+		// 		&:active {
+		// 			color: var(--active);
+		// 		}
+		// 	}
+		// }
 
-	// &_size {
-	// 	&_big {
-	// 		font-size: 20px;
-	// 	}
-	// }
+		// &_size {
+		// 	&_big {
+		// 		font-size: 20px;
+		// 	}
+	}
 
-	// &_underlined {
-	// 	text-decoration: underline;
-	// }
+	&_underlined {
+		text-decoration: underline;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
 }

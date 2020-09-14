@@ -5,7 +5,11 @@
 	}
 
 	&__input.input {
-		width: 402px;
+		max-width: 402px;
+	}
+
+	&__link {
+		margin-left: 19px;
 	}
 
 	&__button {
@@ -15,5 +19,14 @@
 	&__filters {
 		flex-basis: 100%;
 		margin-top: 30px;
+	}
+}
+
+@media (max-width: 999px) {
+	.extended-search-block {
+		&__input.input {
+			max-width: 100%;
+			margin-bottom: 30px;
+		}
 	}
 }

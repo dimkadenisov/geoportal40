@@ -2,6 +2,7 @@ mixin extended-search-block(props = {})
   include input
   include button
   include search-filters
+  include link
 
   .extended-search-block&attributes(attributes)
     .container
@@ -13,5 +14,6 @@ mixin extended-search-block(props = {})
             class: 'extended-search-block__input',
           }
         })(type="text")
+        +link({tag: 'button', text: 'Расширенный поиск'})(class="link_color_gray-400 link_underlined extended-search-block__link")
         +button({tag: 'a', text: 'Заказать данные'})(class="button_color_primary extended-search-block__button" href="#")
         +search-filters(class="extended-search-block__filters")

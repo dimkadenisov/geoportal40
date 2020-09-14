@@ -2,7 +2,16 @@
 	margin-bottom: 60px;
 
 	&__inner {
+		position: relative;
 		height: 505px;
+
+		& > .container {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 2;
+		}
 	}
 
 	div.swiper-pagination {
@@ -24,5 +33,23 @@
 	.swiper-button-next,
 	.swiper-button-prev {
 		color: var(--white);
+	}
+
+	.swiper-button-next {
+		right: 10px;
+	}
+
+	.swiper-button-prev {
+		left: 10px;
+	}
+}
+
+@media (max-width: 699px) {
+	.hero-swiper {
+		&__inner {
+			& > .container {
+				display: none;
+			}
+		}
 	}
 }

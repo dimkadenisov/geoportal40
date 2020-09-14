@@ -1,0 +1,10 @@
+.schedule {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 25px;
+	row-gap: 10px;
+
+	&__item {
+		grid-column: span 1;
+	}
+}
