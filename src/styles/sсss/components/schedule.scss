@@ -1,10 +1,16 @@
 .schedule {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	column-gap: 25px;
+	column-gap: 35px;
 	row-gap: 10px;
 
 	&__item {
 		grid-column: span 1;
+	}
+}
+
+@media (max-width: 599px) {
+	.schedule {
+		column-gap: 15px;
 	}
 }
