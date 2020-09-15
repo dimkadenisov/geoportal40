@@ -1,0 +1,18 @@
+mixin pagination(props = {})
+  include icon-button
+
+  .pagination&attributes(attributes)
+    .container
+      .pagination__inner
+        span.pagination__text Страница
+          |
+          |
+          b 2
+          |
+          |
+          |из
+          |
+          |
+          b 6
+        +icon-button({iconId: 'prev'})(href="#" class="icon-button_color_primary-light")
+        +icon-button({iconId: 'next'})(href="#" class="icon-button_color_primary-light")

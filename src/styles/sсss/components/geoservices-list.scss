@@ -1,8 +1,10 @@
 .geoservices-list {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 9px 7px;
-	margin-bottom: 150px;
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 9px 7px;
+		margin-bottom: 150px;
+	}
 
 	&__item {
 		grid-column: span 1;

@@ -1,0 +1,15 @@
+mixin data-catalog-item(props = {})
+  include data-catalog-item-heading
+  include heading
+  include text-block
+  include button
+
+  - const { iconId, heading, blocks } = props;
+
+  .data-catalog-item&attributes(attributes)
+    +data-catalog-item-heading({iconId: iconId, text: heading})
+    .data-catalog-item__blocks
+      each block in blocks
+        +heading({level: 3, text: block.heading})
+        +text-block({text: block.text})(class="text-block_color_gray-400")
+    +button({tag: 'a', text: 'К разделу'})(href="#" class="button_outlined")

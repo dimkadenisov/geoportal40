@@ -1,0 +1,12 @@
+extends ../components/page
+include ../components/extended-search-block
+include ../components/data-catalog-section-block
+
+block head
+  title Административно-территориальное деление
+
+block content
+  +data-catalog-section-block({
+    iconId: 'pin',
+    heading: 'Административно-территориальное деление'
+  })

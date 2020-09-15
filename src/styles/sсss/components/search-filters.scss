@@ -1,5 +1,7 @@
 .search-filters {
 	display: flex;
+	max-height: 200px;
+	transition: max-height 0.3s;
 
 	&__item {
 		flex-basis: calc(50% - 30px / 2);
@@ -8,6 +10,11 @@
 		&:nth-last-child(n + 2) {
 			margin-right: 30px;
 		}
+	}
+
+	&_closed {
+		max-height: 0;
+		overflow: hidden;
 	}
 
 	.input,

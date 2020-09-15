@@ -1,0 +1,17 @@
+.data-catalog-item {
+	display: flex;
+	flex-direction: column;
+	padding: 35px 28px;
+	border-radius: 20px;
+	background-color: var(--white);
+
+	&__blocks {
+		margin-bottom: 12px;
+	}
+
+	.button {
+		margin-top: auto;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}

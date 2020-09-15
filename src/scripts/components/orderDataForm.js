@@ -3,7 +3,6 @@ document.body.addEventListener('click', (e) => {
 
 	if (!switchInput) return;
 
-	console.log('event');
 	if (switchInput.checked) {
 		document
 			.querySelector('[data-id="ul"]')

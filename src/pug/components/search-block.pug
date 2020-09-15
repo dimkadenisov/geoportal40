@@ -1,31 +1,38 @@
 mixin search-block(props = {})
   include input
   include bages-list
+  include link
 
   .search-block&attributes(attributes)
     .container
-      +input({
-        label: 'Поиск по геосервисам',
-        iconId: 'search',
-        labelAttrs: {
-          class: 'search-block__input'
-        }
-      })(type="text")
-      +bages-list({
-        items: [
-          'управление',
-          'экология',
-          'туризм',
-          'сельское хозяйство',
-          'коммунальное хозяйство',
-          'лесной фонд',
-          'культура',
-          'культура',
-          'охота',
-          'транспорт',
-          'полезные ископаемые',
-          'налоги',
-          'медицина',
-          'мфц',
-        ]
-      })
+      .search-block__inner
+        +input({
+          label: 'Поиск по геосервисам',
+          iconId: 'search',
+          labelAttrs: {
+            class: 'search-block__input'
+          },
+          buttonAttrs: {
+            class: 'icon-button_color_primary-light',
+            type: 'button'
+          }
+        })(type="text")
+        +bages-list({
+          items: [
+            'управление',
+            'экология',
+            'туризм',
+            'сельское хозяйство',
+            'коммунальное хозяйство',
+            'лесной фонд',
+            'культура',
+            'культура',
+            'охота',
+            'транспорт',
+            'полезные ископаемые',
+            'налоги',
+            'медицина',
+            'мфц',
+          ]
+        })(class="bages-list_closed")
+        +link({tag: 'button', text: 'Все теги'})(class="link_underlined link_color_gray-400 search-block__link")

@@ -7,5 +7,8 @@ mixin capcha-block(props = {})
     +input({
       label: 'Введите символы с картинки',
       iconId: 'cross',
+      buttonAttrs: {
+        class: 'icon-button_circle icon-button_color_transparent icon-button_clear',
+      }
     })(type="text" class="capcha-block__input")
     +button({text: 'Отправить'})(class="button_color_primary")

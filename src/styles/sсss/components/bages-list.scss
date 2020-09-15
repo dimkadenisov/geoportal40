@@ -1,11 +1,22 @@
 .bages-list {
 	display: flex;
 	flex-wrap: wrap;
+	max-height: 500px;
 	margin-right: -10px;
+	transition: max-height 0.3s;
 
 	&__item {
 		display: inline-block;
 		margin-right: 10px;
 		margin-bottom: 17px;
+	}
+}
+
+@media (max-width: 779px) {
+	.bages-list {
+		&_closed {
+			max-height: 114px;
+			overflow: hidden;
+		}
 	}
 }

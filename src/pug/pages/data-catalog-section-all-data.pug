@@ -1,0 +1,15 @@
+extends ../components/page
+include ../components/extended-search-block
+include ../components/data-catalog-section-block
+include ../components/pagination
+
+block head
+  title Все данные
+
+block content
+  +extended-search-block
+  +data-catalog-section-block({
+    iconId: false,
+    heading: 'Все данные'
+  })
+  +pagination

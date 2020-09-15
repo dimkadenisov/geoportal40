@@ -3,8 +3,9 @@ mixin geoservices-list(props = {})
 
   - const { items } = props;
 
-  .container
-    ul.geoservices-list&attributes(attributes)
-      each item in items
-        li.geoservices-list__item
-          +geoservice(item)
+  section.geoservices-list
+    .container
+      ul.geoservices-list__inner&attributes(attributes)
+        each item in items
+          li.geoservices-list__item
+            +geoservice(item)

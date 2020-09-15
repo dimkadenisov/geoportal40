@@ -1,0 +1,39 @@
+mixin data-catalog-section-block(props = {})
+  include data-catalog-item-heading
+  include heading
+  include data-catalog-section-list
+
+  - const { iconId, heading } = props;
+
+  section.data-catalog-section-block&attributes(attributes)
+    .container
+      .data-catalog-section-block__inner
+        +data-catalog-item-heading({
+          iconId: iconId,
+          text: heading,
+          cross: true
+        })
+        +data-catalog-section-list({
+          items: [
+            {
+              imgSrc: 'assets/img/ko.jpg',
+              heading: 'Границы КО',
+              text: 'Калужская область расположена в центральной части Восточно-Европейской равнины. Территория региона находится между Среднерусской (со средними высотами в пределах региона выше 200 м и максимальной отметкой 275 м на юго-востоке области), Смоленско-Московской возвышенностями и Днепровско-Деснинской провинцией.',
+            },
+            {
+              imgSrc: 'assets/img/mr.jpg',
+              heading: 'Границы МР',
+              text: 'В Калужской области 24 района, 2 городских округа, 26 городских и 259 сельских поселений. Самый большой по площади — Ульяновский район, самый маленький — Тарусский.',
+            },
+            {
+              imgSrc: 'assets/img/mo.jpg',
+              heading: 'Границы МО(СП/ГП)',
+              text: 'В Калужской области 311 муниципальных образований.',
+            },
+            {
+              imgSrc: 'assets/img/np.jpg',
+              heading: 'Границы НП',
+              text: 'В Калужской области 26 городских и 259 сельских поселений.',
+            },
+          ]
+        })

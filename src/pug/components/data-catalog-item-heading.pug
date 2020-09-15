@@ -1,0 +1,12 @@
+mixin data-catalog-item-heading(props = {})
+  include icon-button
+
+  - const { iconId, text, cross } = props;
+
+  .data-catalog-item-heading&attributes(attributes)
+    if iconId
+      svg.data-catalog-item-heading__icon
+        use(href=`#${iconId}`)
+    +heading({level: 2, text: text})
+    if cross
+      +icon-button({tag: 'a', iconId: 'cross'})(href="#" class="icon-button_color_white icon-button_size_big icon-button_circle")

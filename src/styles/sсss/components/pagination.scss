@@ -1,0 +1,15 @@
+.pagination {
+	&__inner {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	&__text {
+		margin-right: 15px;
+	}
+
+	.icon-button:last-child {
+		margin-left: 4px;
+	}
+}

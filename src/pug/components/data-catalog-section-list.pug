@@ -1,0 +1,9 @@
+mixin data-catalog-section-list(props = {})
+  include data-catalog-section-item
+
+  - const { items } = props;
+
+  ul.data-catalog-section-list&attributes(attributes)
+    each item in items
+      li.data-catalog-section-list__item
+        +data-catalog-section-item(item)

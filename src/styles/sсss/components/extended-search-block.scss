@@ -1,24 +1,28 @@
 .extended-search-block {
+	margin-bottom: 23px;
+
 	&__inner {
 		display: flex;
 		flex-wrap: wrap;
 	}
 
 	&__input.input {
+		align-self: flex-start;
 		max-width: 402px;
 	}
 
 	&__link {
+		margin-bottom: 30px;
 		margin-left: 19px;
 	}
 
 	&__button {
+		margin-bottom: 30px;
 		margin-left: auto;
 	}
 
 	&__filters {
 		flex-basis: 100%;
-		margin-top: 30px;
 	}
 }
 
@@ -27,6 +31,14 @@
 		&__input.input {
 			max-width: 100%;
 			margin-bottom: 30px;
+		}
+	}
+}
+
+@media (max-width: 599px) {
+	.extended-search-block {
+		&__button {
+			width: 100%;
 		}
 	}
 }

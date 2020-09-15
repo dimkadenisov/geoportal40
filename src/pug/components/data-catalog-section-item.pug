@@ -1,0 +1,12 @@
+mixin data-catalog-section-item(props = {})
+  include heading
+  include text-block
+
+
+  - const { imgSrc, heading, text } = props;
+
+  .data-catalog-section-item&attributes(attributes)
+    img(src=imgSrc).data-catalog-section-item__img
+    .data-catalog-section-item__text
+      +heading({level: 3, text: heading})
+      +text-block({text: text})(class="text-block_color_gray-400")

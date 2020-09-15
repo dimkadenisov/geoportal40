@@ -37,4 +37,13 @@
 			box-shadow: none;
 		}
 	}
+
+	&_outlined {
+		border: 1px solid var(--primary);
+	}
+
+	&_centered {
+		margin-right: auto;
+		margin-left: auto;
+	}
 }

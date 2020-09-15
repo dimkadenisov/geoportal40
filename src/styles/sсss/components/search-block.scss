@@ -1,7 +1,30 @@
 .search-block {
 	margin-bottom: 50px;
 
+	&__inner {
+		display: flex;
+		flex-direction: column;
+	}
+
 	&__input {
+		max-width: 402px;
 		margin-bottom: 23px;
+	}
+
+	&__link {
+		display: none;
+		margin-left: auto;
+	}
+}
+
+@media (max-width: 779px) {
+	.search-block {
+		&__input {
+			max-width: 100%;
+		}
+
+		&__link {
+			display: inline-flex;
+		}
 	}
 }
