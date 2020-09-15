@@ -1,5 +1,19 @@
 "use strict";
 
+document.body.addEventListener('click', e => {
+  const toggler = e.target.closest('.search-block__link');
+  if (!toggler) return;
+  toggler.parentNode.querySelector('.bages-list').classList.toggle('bages-list_closed');
+});
+"use strict";
+
+document.body.addEventListener('click', e => {
+  const clearButton = e.target.closest('.icon-button_clear');
+  if (!clearButton) return;
+  clearButton.parentNode.querySelector('input').value = '';
+});
+"use strict";
+
 const linksSwiper = document.querySelector('.hero-swiper__inner') && new Swiper('.hero-swiper__inner', {
   slidesPerView: 1,
   spaceBetween: 0,
@@ -17,7 +31,6 @@ const linksSwiper = document.querySelector('.hero-swiper__inner') && new Swiper(
 document.body.addEventListener('click', e => {
   const switchInput = e.target.closest('[data-id="order-data-form-switch"]');
   if (!switchInput) return;
-  console.log('event');
 
   if (switchInput.checked) {
     document.querySelector('[data-id="ul"]').classList.remove('visually-hidden');
@@ -26,4 +39,11 @@ document.body.addEventListener('click', e => {
     document.querySelector('[data-id="ul"]').classList.add('visually-hidden');
     document.querySelector('[data-id="phis"]').classList.remove('visually-hidden');
   }
+});
+"use strict";
+
+document.body.addEventListener('click', e => {
+  const toggler = e.target.closest('.extended-search-block__link');
+  if (!toggler) return;
+  toggler.parentNode.querySelector('.search-filters').classList.toggle('search-filters_closed');
 });
