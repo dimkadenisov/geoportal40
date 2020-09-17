@@ -8,6 +8,20 @@ document.body.addEventListener('click', e => {
 "use strict";
 
 document.body.addEventListener('click', e => {
+  const burgerButton = e.target.closest('.header__burger-button');
+  if (!burgerButton) return;
+  burgerButton.closest('.header').classList.toggle('header_opened');
+  document.body.classList.toggle('overflow_hidden');
+
+  if (burgerButton.querySelector('use').getAttribute('href') === '#cross') {
+    burgerButton.querySelector('use').setAttribute('href', '#burger');
+  } else {
+    burgerButton.querySelector('use').setAttribute('href', '#cross');
+  }
+});
+"use strict";
+
+document.body.addEventListener('click', e => {
   const clearButton = e.target.closest('.icon-button_clear');
   if (!clearButton) return;
   clearButton.parentNode.querySelector('input').value = '';
@@ -60,4 +74,11 @@ document.body.addEventListener('click', e => {
   const toggler = e.target.closest('.extended-search-block__link');
   if (!toggler) return;
   toggler.parentNode.querySelector('.search-filters').classList.toggle('search-filters_closed');
+});
+"use strict";
+
+document.body.addEventListener('click', e => {
+  const showAllServices = e.target.closest('.geoservices-list__show-all-button');
+  if (!showAllServices) return;
+  showAllServices.closest('.geoservices-list').classList.toggle('geoservices-list_opened');
 });
