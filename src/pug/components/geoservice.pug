@@ -5,6 +5,6 @@ mixin geoservice(props = {})
   a(href="#").geoservice&attributes(attributes)
     .geoservice__inner
       .geoservice__img-wrapper
-        img(src=imgUrl, alt="Описание геосервиса").geoservice__img
+        img(src=imgUrl, alt=name loading="lazy").geoservice__img
       span.geoservice__name= name
       span.geoservice__tagline= tagline

@@ -1,5 +1,6 @@
 mixin main-menu(props = {})
   include link
+  include button
 
   - const { items } = props;
 
@@ -7,3 +8,5 @@ mixin main-menu(props = {})
     each item in items
       li.main-menu__item
         +link(item)
+    li.main-menu__item
+      +button({tag: 'a', text: 'Войти'})(class="button_shadow")

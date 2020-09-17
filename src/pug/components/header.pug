@@ -1,7 +1,7 @@
 mixin header(props = {})
   include logo
   include main-menu
-  include button
+  include icon-button
 
   .header&attributes(attributes)
     .container
@@ -23,4 +23,4 @@ mixin header(props = {})
             },
           ]
         })
-        +button({tag: 'a', text: 'Войти'})(class="button_shadow")
+        +icon-button({iconId: 'burger'})(type="button" class="icon-button_color_white icon-button_circle icon-button_shadow icon-button_size_big header__burger-button")

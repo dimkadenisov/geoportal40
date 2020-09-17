@@ -23,6 +23,10 @@
 		margin-right: 15px;
 	}
 
+	&:focus {
+		outline: none;
+	}
+
 	&_color {
 		&_primary {
 			background-color: var(--primary);

@@ -10,6 +10,7 @@
 
 	&:hover,
 	&:focus {
+		outline: none;
 		text-decoration: underline;
 	}
 
@@ -21,24 +22,6 @@
 		&_gray-400 {
 			color: var(--gray-400);
 		}
-		// 	&_primary {
-		// 		color: var(--primary);
-
-		// 		&:hover,
-		// 		&:focus {
-		// 			color: var(--hover);
-		// 		}
-
-		// 		&:active {
-		// 			color: var(--active);
-		// 		}
-		// 	}
-		// }
-
-		// &_size {
-		// 	&_big {
-		// 		font-size: 20px;
-		// 	}
 	}
 
 	&_underlined {

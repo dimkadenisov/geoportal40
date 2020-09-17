@@ -1,5 +1,6 @@
 mixin geoservices-list(props = {})
   include geoservice
+  include button
 
   - const { items } = props;
 
@@ -9,3 +10,5 @@ mixin geoservices-list(props = {})
         each item in items
           li.geoservices-list__item
             +geoservice(item)
+      .d_flex
+        +button({text: 'Показать все'})(class="geoservices-list__show-all-button" type="button")

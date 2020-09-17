@@ -64,6 +64,8 @@
 		}
 
 		&:focus {
+			outline: none;
+
 			& + .input__label {
 				max-height: 16px;
 				color: var(--primary);
