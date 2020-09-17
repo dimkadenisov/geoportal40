@@ -24,6 +24,10 @@
 	&__filters {
 		flex-basis: 100%;
 	}
+
+	.order-data-button {
+		display: none;
+	}
 }
 
 @media (max-width: 1079px) {
@@ -37,8 +41,20 @@
 
 @media (max-width: 599px) {
 	.extended-search-block {
+		&__link {
+			margin-left: auto;
+		}
+
 		&__button {
-			width: 100%;
+			display: none;
+		}
+
+		.order-data-button {
+			display: inline-flex;
+			position: fixed;
+			right: 16px;
+			bottom: 30px;
+			z-index: 5;
 		}
 	}
 }
