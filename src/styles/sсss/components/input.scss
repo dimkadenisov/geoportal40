@@ -45,16 +45,16 @@
 	&__input {
 		@include input-appearance-reset($pt: 16px);
 
-		&[required] {
-			& + .input__label {
-				&::after {
-					content: '*';
-					display: inline-block;
-					margin-left: 0.2em;
-					color: var(--red);
-				}
-			}
-		}
+		// &[required] {
+		// 	& + .input__label {
+		// 		&::after {
+		// 			content: '*';
+		// 			display: inline-block;
+		// 			margin-left: 0.2em;
+		// 			color: var(--red);
+		// 		}
+		// 	}
+		// }
 
 		&:placeholder-shown {
 			& + .input__label {

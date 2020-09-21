@@ -33,6 +33,10 @@
 	.swiper-button-next,
 	.swiper-button-prev {
 		color: var(--white);
+
+		&::after {
+			font-size: 25px;
+		}
 	}
 
 	.swiper-button-next {
