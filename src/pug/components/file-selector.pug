@@ -2,5 +2,8 @@ mixin file-selector(props = {})
   include button
 
   .file-selector&attributes(attributes)
-    +button({text: 'Выберите файл'})(class="button_color_primary" type="button")
+    //- +button({text: 'Выберите файл'})(class="button_color_primary" type="button")
+    label.button.button_color_primary
+      span Выберите файл
+      input(type="file").file-selector__input.visually-hidden#biba
     span.file-selector__filename Файл не выбран
