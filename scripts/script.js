@@ -50,8 +50,21 @@ document.body.addEventListener('submit', e => {
   const form = e.target.closest('form');
   if (!form) return;
   e.preventDefault();
-  document.querySelector('#biba');
+  document.querySelector('#file-selector');
   console.log(e);
+});
+"use strict";
+
+document.addEventListener('scroll', e => {
+  const header = document.querySelector('.header');
+
+  if (header && window.pageYOffset > 0) {
+    header.classList.add('header_scrolled');
+  }
+
+  if (header && window.pageYOffset === 0) {
+    header.classList.remove('header_scrolled');
+  }
 });
 "use strict";
 
@@ -88,11 +101,11 @@ document.body.addEventListener('click', e => {
   if (!switchInput) return;
 
   if (switchInput.checked) {
-    document.querySelector('[data-id="ul"]').classList.remove('visually-hidden');
-    document.querySelector('[data-id="phis"]').classList.add('visually-hidden');
+    document.querySelector('[data-id="ul"]').classList.remove('d_none');
+    document.querySelector('[data-id="phis"]').classList.add('d_none');
   } else {
-    document.querySelector('[data-id="ul"]').classList.add('visually-hidden');
-    document.querySelector('[data-id="phis"]').classList.remove('visually-hidden');
+    document.querySelector('[data-id="ul"]').classList.add('d_none');
+    document.querySelector('[data-id="phis"]').classList.remove('d_none');
   }
 });
 "use strict";
