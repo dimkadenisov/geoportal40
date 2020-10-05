@@ -3,12 +3,13 @@
 	align-items: center;
 	color: var(--black);
 	font-size: 14px;
+	line-height: 21px;
 	text-decoration: none;
 
 	&__icon {
 		flex-shrink: 0;
-		width: 18px;
-		height: 18px;
+		width: 10px;
+		height: 10px;
 		margin-right: 6px;
 		color: var(--primary);
 	}

@@ -44,7 +44,7 @@ mixin order-data-form(props = {})
             div.form__field
               //- add autoComplete attributtes
               +input({label: 'Адрес электронной почты'})(type="mail" required)
-          fieldset(data-id="ul").form__filedset.form__filedset.visually-hidden
+          fieldset(data-id="ul").form__filedset.form__filedset.d_none
             legend.form__legend Юридическое лицо
             div.form__field
               +input({label: 'Название организации'})(type="text" required)

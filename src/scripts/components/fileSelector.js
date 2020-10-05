@@ -33,6 +33,6 @@ document.body.addEventListener('submit', (e) => {
 	if (!form) return;
 
 	e.preventDefault();
-	document.querySelector('#biba');
+	document.querySelector('#file-selector');
 	console.log(e);
 });

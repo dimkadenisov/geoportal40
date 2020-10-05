@@ -10,8 +10,8 @@
 
 	&:hover,
 	&:focus {
+		color: var(--primary);
 		outline: none;
-		text-decoration: underline;
 	}
 
 	&_active {
@@ -21,6 +21,10 @@
 	&_color {
 		&_gray-400 {
 			color: var(--gray-400);
+
+			&:active {
+				opacity: 0.2;
+			}
 		}
 	}
 

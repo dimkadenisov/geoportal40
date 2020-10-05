@@ -3,7 +3,8 @@
 		display: grid;
 		grid-template-columns: 4fr 6fr;
 		grid-template-areas: 'heading heading' 'text image';
-		gap: 14px;
+		column-gap: 31px;
+		row-gap: 14px;
 		padding: 35px 30px 40px;
 		background-color: var(--white);
 		border-radius: 20px;

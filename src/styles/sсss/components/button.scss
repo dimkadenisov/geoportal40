@@ -23,6 +23,10 @@
 		margin-right: 15px;
 	}
 
+	&:hover {
+		color: var(--primary-action);
+	}
+
 	&:focus {
 		outline: none;
 	}
@@ -31,6 +35,12 @@
 		&_primary {
 			background-color: var(--primary);
 			color: var(--white);
+
+			&:hover,
+			&:focus {
+				background-color: var(--primary-action);
+				color: var(--white);
+			}
 		}
 	}
 
@@ -44,6 +54,12 @@
 
 	&_outlined {
 		border: 1px solid var(--primary);
+
+		&:hover,
+		&:focus {
+			background-color: var(--primary-action);
+			color: var(--white);
+		}
 	}
 
 	&_centered {

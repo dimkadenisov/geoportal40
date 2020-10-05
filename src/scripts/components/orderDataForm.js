@@ -4,14 +4,10 @@ document.body.addEventListener('click', (e) => {
 	if (!switchInput) return;
 
 	if (switchInput.checked) {
-		document
-			.querySelector('[data-id="ul"]')
-			.classList.remove('visually-hidden');
-		document.querySelector('[data-id="phis"]').classList.add('visually-hidden');
+		document.querySelector('[data-id="ul"]').classList.remove('d_none');
+		document.querySelector('[data-id="phis"]').classList.add('d_none');
 	} else {
-		document.querySelector('[data-id="ul"]').classList.add('visually-hidden');
-		document
-			.querySelector('[data-id="phis"]')
-			.classList.remove('visually-hidden');
+		document.querySelector('[data-id="ul"]').classList.add('d_none');
+		document.querySelector('[data-id="phis"]').classList.remove('d_none');
 	}
 });

@@ -9,6 +9,10 @@
 		object-fit: cover;
 		object-position: center center;
 	}
+
+	.text-block {
+		max-width: 530px;
+	}
 }
 
 @media (max-width: 599px) {
