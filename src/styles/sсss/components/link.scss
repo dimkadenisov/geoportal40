@@ -22,7 +22,12 @@
 		&_gray-400 {
 			color: var(--gray-400);
 
-			&:active {
+			&:hover {
+				color: var(--gray-400);
+			}
+
+			&:focus {
+				color: var(--gray-400);
 				opacity: 0.2;
 			}
 		}

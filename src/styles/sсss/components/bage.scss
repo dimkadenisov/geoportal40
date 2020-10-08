@@ -13,12 +13,12 @@
 	transition: background-color 0.2s, color 0.2s;
 
 	&:hover {
-		background-color: var(--primary);
+		background-color: var(--primary-action);
 		color: var(--white);
 	}
 
 	&:focus {
-		border-color: var(--primary);
+		// border-color: var(--primary);
 		outline: none;
 	}
 }

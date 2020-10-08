@@ -19,13 +19,17 @@
 		height: 15px;
 	}
 
+	&:focus {
+		outline: none;
+	}
+
 	&_color {
 		&_primary-light {
 			background-color: var(--primary-light);
 			color: var(--primary);
 
 			&:hover {
-				background-color: var(--primary);
+				background-color: var(--primary-action);
 				color: var(--white);
 			}
 		}

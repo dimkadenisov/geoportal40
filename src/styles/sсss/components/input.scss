@@ -6,7 +6,7 @@
 
 	&:hover {
 		.input__focus {
-			box-shadow: 0 0 0 1px var(--gray-400);
+			box-shadow: 0 0 0 1px var(--primary-action);
 		}
 
 		& .input__input[disabled] {
@@ -73,7 +73,7 @@
 			}
 
 			& ~ .input__focus {
-				box-shadow: 0 0 0 1px var(--primary);
+				box-shadow: 0 0 0 1px var(--primary-action);
 			}
 		}
 

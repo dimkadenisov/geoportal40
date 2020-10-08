@@ -15,6 +15,10 @@
 	&__link {
 		margin-bottom: 30px;
 		margin-left: 19px;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	&__button {
