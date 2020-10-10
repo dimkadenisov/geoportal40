@@ -11,7 +11,7 @@
 
 	&:hover {
 		.select__focus {
-			box-shadow: 0 0 0 1px var(--gray-400);
+			box-shadow: 0 0 0 1px var(--primary-action);
 		}
 
 		& .select__select[disabled] {
